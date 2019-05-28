@@ -6,6 +6,8 @@ class MusicContainer extends Component {
     this.state = {
       musicList: []
     };
+
+    this.handleMusicList = this.handleMusicList.bind(this);
   }
 
   componentDidMount() {
@@ -17,6 +19,10 @@ class MusicContainer extends Component {
       .then(songs => {
         this.setState({ musicList: songs });
       });
+  }
+
+  handleMusicList(index) {
+    const song = this.state.musicList;
   }
 
   render() {
